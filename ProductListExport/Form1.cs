@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -343,14 +343,26 @@ public class ProductInfo
     {
         get { return StrToInch(TryGetNodeValue("/POS3000Data/Product/@MaterialThickness")); }
     }
-    public float FlatWidth
+    public float PosFlatWidth
     {
         get { return StrToInch(TryGetNodeValue("/POS3000Data/Product/@FlatWidth")); }
     }
 
-    public float FlatLength
+    public float PosFlatLength
     {
         get { return StrToInch(TryGetNodeValue("/POS3000Data/Product/@FlatLength")); }
+    }
+
+    public float FlatWidth
+    {
+        // FlatWidth should be the shorter of flat side lengths
+        get { return Math.Min(PosFlatWidth, PosFlatLength) ; }
+    }
+
+    public float FlatLength
+    {
+        // FlatLength should be the longer of flat side lengths
+        get { return Math.Max(PosFlatWidth, PosFlatLength); }
     }
 
     public Tools Tools
