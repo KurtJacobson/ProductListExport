@@ -312,7 +312,7 @@ public class ProductInfo
             ZipArchiveEntry entry = archive.GetEntry("Product.xml");
 
             using (var stream = entry.Open())
-            using (var reader = new StreamReader(stream))
+            using (var reader = new StreamReader(stream, Encoding.UTF8))
             {
                 doc.LoadXml(reader.ReadToEnd());
             }

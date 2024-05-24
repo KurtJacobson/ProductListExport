@@ -65,20 +65,25 @@
             this.lblNote2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lblNote3 = new System.Windows.Forms.Label();
-            this.btnDeleteItm = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.lblNote4 = new System.Windows.Forms.Label();
+            this.btnDeleteItm = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExport
             // 
-            this.btnExport.Location = new System.Drawing.Point(653, 380);
+            this.btnExport.Location = new System.Drawing.Point(652, 405);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(75, 23);
             this.btnExport.TabIndex = 0;
@@ -88,7 +93,7 @@
             // 
             // btnChooseFolder
             // 
-            this.btnChooseFolder.Location = new System.Drawing.Point(13, 380);
+            this.btnChooseFolder.Location = new System.Drawing.Point(12, 405);
             this.btnChooseFolder.Name = "btnChooseFolder";
             this.btnChooseFolder.Size = new System.Drawing.Size(75, 23);
             this.btnChooseFolder.TabIndex = 4;
@@ -98,7 +103,7 @@
             // 
             // btnChooseFile
             // 
-            this.btnChooseFile.Location = new System.Drawing.Point(94, 380);
+            this.btnChooseFile.Location = new System.Drawing.Point(93, 405);
             this.btnChooseFile.Name = "btnChooseFile";
             this.btnChooseFile.Size = new System.Drawing.Size(75, 23);
             this.btnChooseFile.TabIndex = 5;
@@ -108,7 +113,7 @@
             // 
             // btnClearSelection
             // 
-            this.btnClearSelection.Location = new System.Drawing.Point(302, 380);
+            this.btnClearSelection.Location = new System.Drawing.Point(301, 405);
             this.btnClearSelection.Name = "btnClearSelection";
             this.btnClearSelection.Size = new System.Drawing.Size(75, 23);
             this.btnClearSelection.TabIndex = 6;
@@ -118,7 +123,7 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(13, 29);
+            this.treeView1.Location = new System.Drawing.Point(12, 54);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(364, 345);
             this.treeView1.TabIndex = 7;
@@ -128,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(12, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 13);
             this.label1.TabIndex = 8;
@@ -137,7 +142,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox1.Location = new System.Drawing.Point(384, 29);
+            this.groupBox1.Location = new System.Drawing.Point(383, 54);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(344, 147);
             this.groupBox1.TabIndex = 9;
@@ -332,7 +337,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox2.Location = new System.Drawing.Point(384, 293);
+            this.groupBox2.Location = new System.Drawing.Point(383, 318);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(344, 81);
             this.groupBox2.TabIndex = 10;
@@ -444,7 +449,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox3.Location = new System.Drawing.Point(384, 183);
+            this.groupBox3.Location = new System.Drawing.Point(383, 208);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(344, 104);
             this.groupBox3.TabIndex = 11;
@@ -552,16 +557,6 @@
             this.lblNote3.Text = "--";
             this.lblNote3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnDeleteItm
-            // 
-            this.btnDeleteItm.Location = new System.Drawing.Point(221, 380);
-            this.btnDeleteItm.Name = "btnDeleteItm";
-            this.btnDeleteItm.Size = new System.Drawing.Size(75, 23);
-            this.btnDeleteItm.TabIndex = 12;
-            this.btnDeleteItm.Text = "Delete Item";
-            this.btnDeleteItm.UseVisualStyleBackColor = true;
-            this.btnDeleteItm.Click += new System.EventHandler(this.btnDeleteItm_Click);
-            // 
             // label14
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -588,11 +583,51 @@
             this.lblNote4.Text = "--";
             this.lblNote4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnDeleteItm
+            // 
+            this.btnDeleteItm.Location = new System.Drawing.Point(220, 405);
+            this.btnDeleteItm.Name = "btnDeleteItm";
+            this.btnDeleteItm.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteItm.TabIndex = 12;
+            this.btnDeleteItm.Text = "Delete Item";
+            this.btnDeleteItm.UseVisualStyleBackColor = true;
+            this.btnDeleteItm.Click += new System.EventHandler(this.btnDeleteItm_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.settingsToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(740, 24);
+            this.menuStrip1.TabIndex = 13;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(740, 411);
+            this.ClientSize = new System.Drawing.Size(740, 435);
             this.Controls.Add(this.btnDeleteItm);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -603,7 +638,9 @@
             this.Controls.Add(this.btnChooseFile);
             this.Controls.Add(this.btnChooseFolder);
             this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Excel Product Export";
             this.groupBox1.ResumeLayout(false);
@@ -615,6 +652,8 @@
             this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,6 +700,10 @@
         private System.Windows.Forms.Label lblNote3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label lblNote4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 
